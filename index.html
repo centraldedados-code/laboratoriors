@@ -1,42 +1,524 @@
 <!doctype html>
-<html lang="pt-BR"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#092040"><meta name="color-scheme" content="light">
-<meta name="description" content="Laboratório RS — Monitoramento de evidências, cursos, seminários e intervenções dos quatro territórios do Instituto BR Arte.">
-<meta property="og:type" content="website"><meta property="og:title" content="Laboratório RS — Monitoramento de Evidências"><meta property="og:description" content="Acervo real do Laboratório RS, organizado por território, atividade, mês e meta.">
-<link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./assets/app-icon-192.png" type="image/png"><link rel="apple-touch-icon" href="./assets/app-icon-192.png">
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#092040">
+<meta name="description" content="Sistema de monitoramento do Laboratório RS do Instituto BR Arte: 34 itens monitorados, galerias de fotografias, vídeos, documentos e evidências por São José, Santa Fé, Reolon e Jardim Esmeralda.">
+<meta name="color-scheme" content="light">
+<meta name="application-name" content="Laboratório RS">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Laboratório RS — Monitoramento de Evidências">
+<meta property="og:description" content="Explore ações, fotos, vídeos e relatórios dos territórios em um portal integrado.">
+<meta property="og:locale" content="pt_BR">
+<link rel="canonical" href="https://centraldedados-code.github.io/laboratoriors/">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" href="./assets/app-icon-192.png">
+<link rel="apple-touch-icon" href="./assets/app-icon-192.png">
+<meta name="format-detection" content="telephone=no">
 <title>Laboratório RS | Monitoramento de Evidências — Instituto BR Arte</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--az:#092040;--deep:#021738;--ci:#00B7D7;--am:#ECC203;--bd:#dce7ef;--bg:#f5f8fc;--mut:#668097;--white:#fff;--shadow:0 14px 35px #09204013}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:94px}body{margin:0;background:linear-gradient(180deg,#f1f5fb,#f7fafc 35%,#f4f7fb);color:#102b45;font:13px/1.6 'Open Sans',Arial,sans-serif;overflow-x:hidden}button,input,select{font:inherit}button{cursor:pointer}a{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--ci);outline-offset:3px}[hidden]{display:none!important}
-h1,h2,h3,h4{font-family:Montserrat,system-ui,sans-serif;line-height:1.32;margin:0}h1{letter-spacing:-1.4px}h2{font-size:clamp(21px,2.3vw,30px)}p{margin:0}.skip{position:absolute;left:-999px}.skip:focus{left:20px;top:12px;z-index:99;background:white;padding:10px;border-radius:8px}
-.topbar{background:#071e38f9;color:#fff;position:sticky;top:0;z-index:90;box-shadow:0 10px 22px #00142e22;backdrop-filter:blur(16px)}.bar{max-width:1340px;margin:auto;min-height:77px;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:10px 24px}.brand{display:flex;align-items:center;gap:12px;min-width:0}.mark{width:48px;height:48px;flex:none;background:linear-gradient(140deg,#0fa1bf,#103352);display:grid;place-items:center;border:2px solid #e2c139;border-radius:14px;color:#ffe469;font:800 20px Montserrat,sans-serif}.brand h2{font-size:15px;color:#f8d748}.brand small{display:block;font-size:10px;color:#b4d2e5;line-height:1.4}.nav{display:flex;gap:4px;align-items:center;flex-wrap:wrap}.nav button{border:0;background:none;color:#c2d8e8;padding:11px 12px;border-radius:10px;font:700 11px Montserrat,sans-serif;white-space:nowrap}.nav button.active,.nav button:hover{background:var(--am);color:var(--az)}.nav .search-toggle{background:#113653;color:#fff;font-size:17px}
-.container{max-width:1290px;margin:auto;padding:24px 22px 56px}.view{display:none}.view.active{display:block}.hero{background:radial-gradient(circle at 95% -20%,#1f829988,transparent 42%),linear-gradient(112deg,#092040 14%,#11486a 90%);border-radius:24px;position:relative;overflow:hidden;color:#fff;padding:44px 42px 42px;box-shadow:var(--shadow)}.hero:after{content:"";position:absolute;right:-90px;top:-130px;width:360px;height:360px;border-radius:50%;border:1px solid #ffffff16;box-shadow:0 0 0 72px #ffffff06,0 0 0 144px #ffffff03;pointer-events:none}.hero .eyebrow{color:#f8d64e;text-transform:uppercase;font:800 11px Montserrat,sans-serif;letter-spacing:1.7px}.hero h1{font-size:clamp(27px,4vw,48px);max-width:750px;margin:16px 0}.hero em{font-style:normal;color:#f0d043}.hero p{max-width:700px;color:#c9dfea;font-size:14px;line-height:1.8}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.btn{border:1px solid transparent;border-radius:12px;padding:12px 17px;min-height:42px;font:800 11px Montserrat,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none}.btn-primary{background:var(--am);color:var(--az)}.btn-dark{background:var(--az);color:#f2d24b}.btn-outline{background:#fff;border-color:#a9c5d9;color:var(--az)}.btn-ghost{border-color:#fff7;color:white;background:#ffffff13}.btn:disabled{opacity:.5;cursor:not-allowed}.ribbon{margin-top:15px;color:#c5e5ed;font-size:11px}
-.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:20px 0 27px}.kpi{background:#fff;padding:20px 21px;border:1px solid var(--bd);border-radius:17px;box-shadow:0 3px 14px #001e3310}.kpi strong{font:800 31px Montserrat,sans-serif;color:#008eae;display:block;line-height:1.25}.kpi small{color:#6a8095;font-size:11px}.kpi em{font-style:normal;font-size:11px;color:#7390a4;display:block;margin-top:6px}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin:30px 0 13px}.section-head .over{font:800 10px Montserrat,sans-serif;color:#068eac;letter-spacing:1.7px;text-transform:uppercase}.section-head p{color:var(--mut);font-size:12px;margin-top:6px;max-width:760px}.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.quick,.territory,.action-card,.folder-card{background:#fff;border:1px solid var(--bd);border-radius:18px;box-shadow:0 4px 15px #001e3309}.quick{padding:25px;display:flex;flex-direction:column;gap:9px}.quick .ic{width:47px;height:47px;background:#eaf8fb;display:grid;place-items:center;border-radius:13px;font-size:22px}.quick h3{font-size:14px}.quick p{color:var(--mut);font-size:12px;flex:1}.quick button{align-self:flex-start;background:none;border:0;color:#087f9d;font-weight:800;padding:7px 0}
-.panel-intro{background:white;border:1px solid var(--bd);border-radius:19px;padding:27px 30px;margin-bottom:18px}.panel-intro .over{font:800 11px Montserrat;color:#028baa;letter-spacing:1.5px;text-transform:uppercase}.panel-intro h1{font:800 clamp(21px,3vw,30px) Montserrat;margin:7px 0}.panel-intro p{color:#627b8f;max-width:900px;font-size:12px}.filterbar{display:flex;gap:10px;flex-wrap:wrap;background:#fff;border:1px solid var(--bd);border-radius:15px;padding:15px;margin:15px 0}.field{flex:1 1 145px;min-width:145px;display:flex;flex-direction:column;gap:5px}.field.search{flex:2 1 255px}.field label{font:800 10px Montserrat;color:#637c92}.field input,.field select{border:1px solid #cadbe6;border-radius:9px;padding:12px 13px;min-height:44px;width:100%;background:#fff;color:#163a54}.field input:focus,.field select:focus{border-color:#00b7d7}.note{color:#6b8195;font-size:11px;line-height:1.6;margin:12px 0}.notice{padding:15px 18px;border-left:4px solid #ecc203;background:#fff9e7;color:#715c17;border-radius:11px;font-size:12px;margin:14px 0}.muted{color:var(--mut)}.chip{display:inline-block;border-radius:7px;padding:5px 9px;background:#e8f8fb;color:#08738c;font:700 10px Montserrat}.chip.gold{background:#fff4c7;color:#816900}.chip.gray{background:#edf2f6;color:#667d90}
-.actions-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.action-card{padding:21px;display:flex;flex-direction:column;gap:10px;min-height:240px}.action-card h3{font-size:14px;color:#0b3151}.card-meta{font:800 10px Montserrat;color:#008eac;display:flex;justify-content:space-between;flex-wrap:wrap;gap:7px}.action-card p{color:var(--mut);font-size:11px}.pillbar{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}.action-card .btn{margin-top:auto;align-self:flex-start}.album-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}.album{border:1px solid var(--bd);padding:0;background:#fff;text-align:left;border-radius:15px;overflow:hidden;box-shadow:0 4px 16px #001e3309}.album figure{margin:0;position:relative;height:152px;background:linear-gradient(125deg,#0b3151,#2c8da3)}.album img{width:100%;height:100%;object-fit:cover}.album .count{position:absolute;bottom:9px;left:9px;background:#092040eb;color:#f9da45;font:800 10px Montserrat;padding:6px 9px;border-radius:7px}.album section{padding:15px}.album h3{font-size:12px;margin:0 0 6px}.album small{color:var(--mut);font-size:11px}.gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}.media-card{border:1px solid var(--bd);border-radius:15px;overflow:hidden;background:#fff;display:flex;flex-direction:column}.media-preview{aspect-ratio:1.38;width:100%;padding:0;border:0;position:relative;background:#e3edf3;display:block}.media-preview img{width:100%;height:100%;object-fit:cover}.media-preview .badge{position:absolute;left:9px;bottom:9px;background:#092040e8;color:#f8d642;padding:6px 9px;border-radius:6px;font:800 10px Montserrat}.media-body{padding:13px;display:flex;flex-direction:column;gap:9px;flex:1}.media-body h4{font-size:11px;overflow-wrap:anywhere;line-height:1.6}.media-body p{color:var(--mut);font-size:10px}.media-body .card-links{margin-top:auto;display:flex;gap:8px}.card-links a,.card-links button{flex:1;border:1px solid #bfd4e2;border-radius:9px;background:white;color:#0b6077;text-align:center;font:800 10px Montserrat;padding:9px;text-decoration:none}.play{position:absolute;inset:0;display:grid;place-items:center}.play b{background:#062540c9;color:white;border:2px solid #fff9;border-radius:999px;width:49px;height:49px;display:grid;place-items:center;font-size:20px}
-.pages{display:flex;justify-content:center;align-items:center;gap:12px;margin:22px 0}.pages button{border:1px solid #b9d0dd;border-radius:10px;background:white;padding:10px 14px;color:var(--az);font-weight:800}.pages button:disabled{opacity:.4}.filter-reset{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}.filter-reset button{background:#e5f7fb;color:#0a6c83;border:1px solid #c7dfe8;border-radius:9px;padding:9px 13px;font-size:11px;font-weight:800}.territory-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.territory{padding:23px}.territory .num{font:800 34px Montserrat;color:#02a1bf;margin:10px 0}.territory h3{font-size:14px}.territory p{color:var(--mut);font-size:11px}.territory button{margin-top:16px}
-.doc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.folder-card{padding:19px;display:flex;flex-direction:column;gap:10px}.folder-card h3{font-size:12px}.folder-card .card-links{margin-top:auto;display:flex;gap:8px}.doc-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.doc-tile{display:flex;gap:13px;align-items:center;background:white;border:1px solid var(--bd);border-radius:13px;padding:13px}.doc-tile .fileico{font-size:25px}.doc-tile strong{display:block;font-size:11px;overflow-wrap:anywhere}.doc-tile small{color:var(--mut)}.doc-tile button{margin-left:auto;white-space:nowrap;border:1px solid #adc6d5;border-radius:8px;background:#e9f8fc;padding:9px 11px;color:#0a5a73;font-weight:800;font-size:10px}.empty{grid-column:1/-1;text-align:center;background:#fff;border:1px dashed #cbdbe5;border-radius:15px;padding:40px;color:var(--mut)}
-.overlay{position:fixed;inset:0;background:#051c35d9;backdrop-filter:blur(6px);z-index:200;display:grid;place-items:center;padding:18px}.dialog{width:min(1000px,100%);max-height:93vh;overflow:auto;border-radius:19px;background:#fff;box-shadow:0 24px 80px #00102277;padding:23px}.dialog.dark{background:#041b34;color:white}.dialog-head{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:15px}.dialog-head h2{font-size:17px}.close{border:0;background:#e7edf3;border-radius:9px;color:#092040;width:36px;height:36px;font:800 21px Arial;flex:none}.dialog-body{max-height:71vh;overflow:auto}.viewer{width:100%;height:min(70vh,670px);display:grid;place-items:center;background:#001124;border-radius:12px;overflow:hidden}.viewer img{width:100%;height:100%;object-fit:contain}.viewer iframe{width:100%;height:100%;border:0;background:#fff}.viewer-foot{display:flex;justify-content:space-between;align-items:center;gap:13px;flex-wrap:wrap;margin-top:12px}.viewer-foot a{color:#f8d94d;text-decoration:none}.viewer-foot button{background:#183b57;color:#fff;border:1px solid #557389;border-radius:9px;padding:9px 12px}.detail-media{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;margin:16px 0}.detail-media button{border:0;padding:0;border-radius:8px;overflow:hidden;background:#e8eff5;aspect-ratio:1.3}.detail-media img{width:100%;height:100%;object-fit:cover}.dialog .notice{margin:14px 0}.footer{max-width:1290px;margin:0 auto 20px;padding:21px 25px;background:#092040;color:#c5dbed;border-radius:18px;display:flex;align-items:center;justify-content:space-between;gap:15px;font-size:11px}.footer strong{color:#f3d140}.footer a{color:#e8d24c}.onboard .dialog{max-width:560px;padding:34px}.step{color:#008bad;text-transform:uppercase;font:800 11px Montserrat;letter-spacing:1.7px}.onboard h2{font-size:25px;margin:10px 0}.onboard p{color:var(--mut);font-size:13px;line-height:1.8}.onboard .actions{justify-content:space-between}
-@media(max-width:1030px){.gallery-grid,.album-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.territory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.doc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:770px){.bar{flex-wrap:wrap;padding:10px 15px}.nav{width:100%;justify-content:space-between}.nav button{flex:1;padding:9px 7px;font-size:10px}.container{padding:14px 13px 34px}.hero{padding:30px 24px}.card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.actions-grid{grid-template-columns:1fr}.gallery-grid,.album-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.doc-list{grid-template-columns:1fr}.detail-media{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:480px){.hero h1{font-size:28px}.hero p{font-size:12px}.brand h2{font-size:13px}.brand small{font-size:9px}.mark{width:41px;height:41px}.nav button{font-size:9px}.card-grid,.territory-grid,.doc-grid{grid-template-columns:1fr}.gallery-grid,.album-grid{gap:8px}.media-body{padding:9px}.media-body h4{font-size:10px}.media-preview{aspect-ratio:1.05}.kpi{padding:14px}.kpi strong{font-size:25px}.panel-intro{padding:20px}.dialog{padding:15px}.footer{margin:0 12px 12px;flex-wrap:wrap}}
-</style></head>
-<body><a href="#conteudo" class="skip">Pular para conteúdo</a>
-<header class="topbar"><div class="bar"><div class="brand"><div class="mark" aria-hidden="true">RS</div><div><h2>LABORATÓRIO RS</h2><small>Instituto BR Arte · Monitoramento de evidências</small></div></div><nav class="nav" aria-label="Menu principal"><button data-nav="inicio" class="active">Início</button><button data-nav="acoes">Ações</button><button data-nav="galeria">Galeria</button><button data-nav="documentos">Documentos</button><button data-nav="territorios">Territórios</button><button id="tour" aria-label="Como utilizar">?</button></nav></div></header>
-<main id="conteudo" class="container">
-<section id="inicio" class="view active"><div class="hero"><div class="eyebrow">Monitoramento documental · 4 territórios</div><h1>Todos os registros.<br><em>Uma experiência simples.</em></h1><p>Acompanhe os cursos, seminários, diagnósticos e intervenções urbanas. Consulte fotografias, vídeos e documentos indexados no Drive oficial do Laboratório RS, organizados por território e por atividade.</p><div class="actions"><button class="btn btn-primary" data-nav="acoes">Consultar as ações</button><button class="btn btn-ghost" data-nav="galeria">Abrir a galeria</button></div><div class="ribbon" id="updated">Carregando acervo oficial…</div></div>
-<div class="kpis"><div class="kpi"><strong id="k-actions">34</strong><small>Itens de acompanhamento do Plano de Trabalho</small></div><div class="kpi"><strong id="k-photos">—</strong><small>Fotografias no catálogo</small></div><div class="kpi"><strong id="k-videos">—</strong><small>Vídeos com vínculo ao Drive</small></div><div class="kpi"><strong id="k-docs">—</strong><small>Documentos selecionados para consulta</small></div></div>
-<div class="section-head"><div><div class="over">Acesso rápido</div><h2>Por onde deseja começar?</h2><p>Escolha o acervo e use os filtros para localizar registros com vínculo à pasta de origem.</p></div></div><div class="card-grid"><article class="quick"><div class="ic">📷</div><h3>Galeria fotográfica</h3><p>Amplie imagens e assista aos vídeos dentro do portal.</p><button data-nav="galeria">Explorar fotos e vídeos →</button></article><article class="quick"><div class="ic">☑️</div><h3>Plano de Trabalho</h3><p>Quatro metas organizadas em entregas e atividades previstas para os territórios.</p><button data-nav="acoes">Consultar ações →</button></article><article class="quick"><div class="ic">📁</div><h3>Documentos do projeto</h3><p>Consulte arquivos selecionados e pastas temáticas do Drive oficial.</p><button data-nav="documentos">Abrir documentos →</button></article></div>
-<div class="section-head"><div><div class="over">Acervo visual</div><h2>Registros em destaque</h2><p>Uma prévia do arquivo oficial, sem duplicar fotografias no catálogo.</p></div></div><div id="featured" class="gallery-grid"></div><div class="notice">Os quantitativos representam arquivos indexados; não significam que as metas e atividades estejam homologadas. Vínculos por pasta são preliminares até conferência das evidências.</div></section>
-<section id="acoes" class="view"><div class="panel-intro"><div class="over">Plano de Trabalho · Quatro metas</div><h1>Cada ação com suas evidências</h1><p>Os cartões representam os itens previstos no Plano de Trabalho do LABRS. Abra uma ficha para verificar os documentos e mídias associados; cursos sem identificação documental individual permanecem agrupados no acervo territorial.</p></div><div class="filterbar"><div class="field search"><label for="a-search">Pesquisar ação</label><input id="a-search" placeholder="Curso, seminário, intervenção…"></div><div class="field"><label for="a-meta">Meta</label><select id="a-meta"><option value="">Todas as metas</option></select></div><div class="field"><label for="a-territory">Território</label><select id="a-territory"><option value="">Todos os territórios</option></select></div></div><p class="note" id="action-count"></p><div id="action-grid" class="actions-grid"></div></section>
-<section id="galeria" class="view"><div class="panel-intro"><div class="over">Acervo fotográfico</div><h1>Galeria de fotos e vídeos</h1><p>Filtre por território, meta, categoria e competência. Abra as miniaturas para ampliar fotografias ou reproduzir vídeos. O visualizador depende da permissão de leitura do arquivo original no Google Drive.</p></div><div class="kpis"><div class="kpi"><strong id="g-photos">—</strong><small>Fotografias</small></div><div class="kpi"><strong id="g-videos">—</strong><small>Vídeos</small></div><div class="kpi"><strong>04</strong><small>Territórios</small></div><div class="kpi"><strong>34</strong><small>Itens previstos para acompanhamento</small></div></div><div class="filterbar"><div class="field search"><label for="g-search">Pesquisar arquivo ou atividade</label><input id="g-search" placeholder="Nome, data, semana ou local…"></div><div class="field"><label for="g-type">Tipo</label><select id="g-type"><option value="">Fotos e vídeos</option><option value="FOTO">Fotografias</option><option value="VIDEO">Vídeos</option></select></div><div class="field"><label for="g-territory">Território</label><select id="g-territory"><option value="">Todos os territórios</option></select></div><div class="field"><label for="g-meta">Meta</label><select id="g-meta"><option value="">Todas as metas</option></select></div><div class="field"><label for="g-category">Categoria</label><select id="g-category"><option value="">Todas as categorias</option></select></div><div class="field"><label for="g-month">Competência</label><select id="g-month"><option value="">Todos os meses</option></select></div></div><div class="filter-reset" id="active-filter" hidden><button id="clear-filters">Limpar filtros e álbum selecionado ×</button></div><div class="section-head"><div><div class="over">Álbuns reais</div><h2>Registros por pasta e atividade</h2><p>Álbuns derivados das rotas oficiais do Drive, sem atribuição artificial entre turmas.</p></div></div><div id="album-grid" class="album-grid"></div><div class="pages"><button id="albums-more">Carregar mais álbuns</button></div><div class="section-head"><div><div class="over">Galeria</div><h2>Todos os registros filtrados</h2><p id="gallery-count"></p></div></div><div id="gallery-grid" class="gallery-grid"></div><div class="pages"><button id="page-prev">Anterior</button><span id="page-current">Página 1 de 1</span><button id="page-next">Próxima</button></div></section>
-<section id="documentos" class="view"><div class="panel-intro"><div class="over">Acervo documental · Conformidade</div><h1>Relatórios, planos, atas e acervos</h1><p>Pastas temáticas e documentos selecionados do LABRS. Não incluímos no índice público listas de presença, contratos, notas fiscais nem arquivos pessoais de bolsistas e colaboradores.</p></div><div class="filterbar"><div class="field search"><label for="d-search">Pesquisar pasta ou documento</label><input id="d-search" placeholder="Território, mês, categoria, nome…"></div><div class="field"><label for="d-territory">Território</label><select id="d-territory"><option value="">Todos os territórios</option></select></div><div class="field"><label for="d-type">Tipo de registro</label><select id="d-type"><option value="pastas">Pastas temáticas</option><option value="arquivos">Documentos selecionados</option></select></div></div><div class="notice">Os documentos são disponibilizados conforme as permissões do Drive. Arquivo localizado é um registro documental, não comprovação automática de realização da meta.</div><p id="doc-count" class="note"></p><div id="folder-grid" class="doc-grid"></div><div id="doc-list" class="doc-list" hidden></div><div class="pages"><button id="docs-more">Carregar mais registros</button></div><div class="actions"><a class="btn btn-outline" href="https://drive.google.com/drive/folders/1pYYXcolJ-aVUEvW6BVQZFF1Ud7bAi4KG" target="_blank" rel="noopener noreferrer">Abrir Drive oficial</a></div></section>
-<section id="territorios" class="view"><div class="panel-intro"><div class="over">Navegação territorial</div><h1>Quatro territórios. Um acervo integrado.</h1><p>São José, Santa Fé, Reolon e Jardim Esmeralda. Escolha o território para visualizar suas fotografias, vídeos e ações, sem misturar os documentos entre as localidades.</p></div><div id="territory-grid" class="territory-grid"></div></section>
-</main><footer class="footer"><div><strong>LABORATÓRIO RS · Instituto BR Arte</strong><div>Monitoramento e transparência documental · Dados de 08/11/2026</div></div><div><a href="https://drive.google.com/drive/folders/1pYYXcolJ-aVUEvW6BVQZFF1Ud7bAi4KG" rel="noopener noreferrer" target="_blank">Drive oficial</a> · <button class="btn btn-ghost" id="refresh">Atualizar catálogo</button></div></footer>
-<div class="overlay" id="viewer-overlay" hidden><div class="dialog dark"><div class="dialog-head"><h2 id="viewer-title">Visualização</h2><button class="close" id="viewer-close" aria-label="Fechar">×</button></div><div class="viewer" id="viewer-body"></div><div class="viewer-foot"><button id="viewer-prev">← Anterior</button><span id="viewer-count" class="muted"></span><button id="viewer-next">Próximo →</button><a id="viewer-link" target="_blank" rel="noopener noreferrer">Abrir arquivo no Drive</a></div></div></div>
-<div class="overlay" id="detail-overlay" hidden><div class="dialog"><div class="dialog-head"><h2 id="detail-title">Ficha da ação</h2><button class="close" id="detail-close" aria-label="Fechar">×</button></div><div class="dialog-body"><div id="detail-copy"></div><div id="detail-gallery" class="detail-media"></div><div class="actions"><button class="btn btn-dark" id="detail-go-gallery">Abrir na galeria</button></div></div></div></div>
-<div class="overlay onboard" id="onboard" hidden><div class="dialog"><div class="dialog-head"><span class="step" id="onboard-step">1 de 3</span><button class="close" id="onboard-close" aria-label="Pular introdução">×</button></div><h2 id="onboard-title"></h2><p id="onboard-copy"></p><div class="actions"><button class="btn btn-outline" id="onboard-skip">Pular</button><button class="btn btn-dark" id="onboard-next">Próximo →</button></div></div></div>
-<script src="./config.js"></script><script src="./plano.js"></script><script src="./app.js" defer></script>
+:root{--az:#092040;--deep:#021738;--ci:#00B7D7;--am:#ECC203;--cz:#EFF1F3;--br:#fff;--mut:#68798d;--bd:#d7e1eb;--bg:#f3f6fa;--green:#237449}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--deep);font-family:'Open Sans',Arial,sans-serif;font-size:13px}h1,h2,h3,h4{font-family:Montserrat,Arial,sans-serif;margin:0}button,input,select{font:inherit}button{cursor:pointer}a{color:inherit}img{max-width:100%}[hidden]{display:none!important}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--ci);outline-offset:2px}
+#access{position:fixed;z-index:1000;inset:0;background:#092040;display:flex;justify-content:center;align-items:center;padding:24px}#access .auth-card{background:white;width:100%;max-width:423px;border-radius:15px;padding:43px 39px;text-align:center;box-shadow:0 20px 50px #0002}.auth-logo{max-width:175px;height:69px;object-fit:contain;margin-bottom:22px}.auth-title{font:800 12px/1.55 Montserrat,Arial,sans-serif;color:#c69d00;text-transform:uppercase;letter-spacing:.8px}.auth-sub{font-size:11px;color:#8694a8;margin:8px 0 20px}.auth-input{width:100%;border:2px solid var(--ci);border-radius:9px;padding:13px 15px;letter-spacing:1px;font-size:14px;margin:2px 0 12px;outline:none}.auth-button{border:0;border-radius:9px;padding:14px;background:var(--az);color:var(--am);width:100%;font:800 12px Montserrat,Arial,sans-serif;text-transform:uppercase}.auth-msg{color:#a33232;min-height:20px;font-size:11px;margin-top:10px}.auth-logos{position:fixed;bottom:30px;display:flex;align-items:center;gap:10px;color:#fff8;letter-spacing:1px;font:700 10px Montserrat,Arial,sans-serif}.auth-logos img{width:46px;height:38px;object-fit:contain}
+.topbar{background:var(--az);color:#fff;position:sticky;top:0;z-index:50;box-shadow:0 3px 13px #071a2e25}.bar-inner{max-width:1250px;margin:auto;padding:8px 18px;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:66px}.brand{display:flex;align-items:center;gap:13px;min-width:0}.brand .mark{height:45px;max-width:150px;background:#fff;padding:6px 8px;border-radius:9px;object-fit:contain}.brand-rule{height:35px;width:1px;background:#ffffff30}.brand-name{font:800 14px Montserrat,Arial,sans-serif;color:var(--am);white-space:nowrap}.brand-sub{font-size:9px;color:#dde9f4;margin-top:3px}.nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px}.nav button{border:0;color:#c8d8e9;background:transparent;padding:9px 12px;border-radius:8px;font:700 10px Montserrat,Arial,sans-serif;white-space:nowrap}.nav button.active,.nav button:hover{background:var(--am);color:var(--az)}
+.container{max-width:1225px;margin:auto;padding:22px 18px 40px}.section{display:none}.section.active{display:block}.hero{background:linear-gradient(120deg,#092040 5%,#10395e 68%,#10607d 100%);color:#fff;border-radius:15px;padding:28px 30px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;border:1px solid #ffffff15;border-radius:50%;width:360px;height:360px;right:-160px;top:-200px}.hero h1{font-size:clamp(23px,3vw,32px);line-height:1.26;letter-spacing:-.5px;max-width:780px;margin:10px 0}.hero p{max-width:820px;color:#d9e9f4;line-height:1.7;margin:0 0 16px;font-size:12px}.hero-label{font:800 10px Montserrat,Arial,sans-serif;letter-spacing:1px;color:var(--am);text-transform:uppercase}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid transparent;border-radius:8px;padding:11px 14px;font:700 11px Montserrat,Arial,sans-serif;gap:7px;min-height:37px}.btn-yellow{background:var(--am);color:var(--az)}.btn-ghost{background:#ffffff14;color:#fff;border-color:#ffffff55}.btn-dark{background:var(--az);color:var(--am)}.btn-outline{background:white;border-color:#aac4db;color:var(--az)}.hero-actions{display:flex;gap:10px;flex-wrap:wrap}.eyebrow{border-left:4px solid var(--ci);padding-left:9px;color:var(--az);font:800 12px Montserrat,Arial,sans-serif;margin:22px 0 12px}.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:12px 0 22px}.kpi{background:#fff;border:1px solid var(--bd);padding:17px;border-radius:11px;box-shadow:0 2px 8px #0b24400b}.kpi b{display:block;color:#00a5c4;font:800 28px Montserrat,Arial,sans-serif}.kpi span{display:block;color:#647487;font-size:11px;margin-top:4px}
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.quick-card{background:white;border:1px solid var(--bd);border-radius:11px;padding:20px;min-height:171px;display:flex;flex-direction:column}.quick-emoji{font-size:22px;margin-bottom:11px}.quick-card h3{font-size:12px;color:var(--az);margin-bottom:6px}.quick-card p{font-size:10.5px;color:#6b7886;line-height:1.6;margin:0 0 14px}.text-link{display:inline-flex;margin-top:auto;border:none;background:transparent;color:#007d9c;padding:0;text-decoration:none;font:700 10px Montserrat,Arial,sans-serif;align-self:flex-start}.preview-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin:12px 0 0}.preview-item{background:#fff;border:1px solid var(--bd);border-radius:9px;overflow:hidden;padding:0;text-align:left}.preview-item img{display:block;aspect-ratio:1.6;object-fit:cover;width:100%;background:#dbe4ec}.preview-item .cap{display:block;font:700 9px Montserrat,Arial,sans-serif;text-align:center;padding:8px;color:var(--az)}.thumb-missing{display:flex;min-height:90px;background:linear-gradient(135deg,#dbe8f2,#eaf4f6);align-items:center;justify-content:center;color:#416b7b;font:600 10px Montserrat,Arial,sans-serif;text-align:center;padding:10px}
+.page-intro{background:#fff;border:1px solid var(--bd);border-radius:12px;padding:22px 24px;margin-bottom:14px}.intro-top{font:800 9px Montserrat,Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;color:var(--ci)}.page-intro h2{font-size:23px;color:var(--az);margin:6px 0}.page-intro p{margin:0;color:#657487;font-size:11px;line-height:1.65}.filterbar{background:#fff;border:1px solid var(--bd);border-radius:10px;padding:12px;display:flex;align-items:flex-end;gap:9px;flex-wrap:wrap;margin:13px 0 17px}.field{display:flex;flex-direction:column;gap:5px;flex:1 1 145px;min-width:135px}.field.search{flex:2 1 230px}.field label{font:700 9px Montserrat,Arial,sans-serif;color:#76879a}.field input,.field select{width:100%;padding:10px 11px;background:#fff;border:1px solid #cbd9e4;border-radius:7px;color:var(--az);font-size:11px;min-height:38px}.field input::placeholder{color:#9aa7b6}.result-note{font-size:11px;color:#778798;margin:10px 0}.actions-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.action-card{background:#fff;border:1px solid #d9e4ed;border-radius:10px;padding:16px 17px;display:flex;flex-direction:column;min-height:228px;box-shadow:0 1px 5px #163d6206}.card-overline{font:800 10px Montserrat,Arial,sans-serif;color:#05a2bb;letter-spacing:.2px;display:flex;justify-content:space-between;gap:7px}.status{background:#fff5c6;color:#8b7000;border-radius:999px;padding:4px 8px;white-space:nowrap;font:700 9px Montserrat,Arial,sans-serif}.status.found{background:#eaf5ee;color:#237449}.action-card h3{color:var(--az);font-size:13px;line-height:1.4;margin:9px 0 4px}.action-card .sub{color:#6b798b;font-size:10px;line-height:1.55}.mini-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;margin:11px 0 9px}.mini-strip img{width:100%;height:66px;object-fit:cover;background:#eef1f6;border-radius:4px}.mini-strip button{border:0;padding:0;border-radius:4px;background:#e5ebf2;overflow:hidden}.mini-strip .no-photo{grid-column:1/-1;background:#f2f7fa;border:1px dashed #cbdce6;border-radius:6px;padding:16px 11px;color:#758394;font-size:10px;text-align:center}.countline{display:flex;flex-wrap:wrap;gap:5px;margin:5px 0 12px}.chip{display:inline-block;border-radius:5px;background:#e7f7fb;color:#08778d;font:700 9px Montserrat,Arial,sans-serif;padding:4px 7px}.chip.gold{background:#fff5bf;color:#8e7000}.chip.muted{background:#eef2f5;color:#647584}.card-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}.card-actions button{min-height:34px;padding:8px 11px;font-size:9px}
+.album-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:13px 0 22px}.album-card{background:#fff;border:1px solid var(--bd);border-radius:10px;overflow:hidden;padding:0;text-align:left;display:flex;flex-direction:column}.album-pic{height:118px;position:relative;background:linear-gradient(120deg,#164364,#18728a)}.album-pic img{width:100%;height:100%;display:block;object-fit:cover}.album-count{position:absolute;bottom:7px;left:8px;border-radius:5px;background:#092040ec;color:#ECC203;padding:5px 7px;font:700 9px Montserrat,Arial,sans-serif}.album-info{padding:12px;flex:1}.album-info strong{display:block;font:800 11px/1.4 Montserrat,Arial,sans-serif;color:var(--az)}.album-info small{display:block;margin-top:6px;color:#758497;font-size:10px}.gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.media-card{background:#fff;border:1px solid var(--bd);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}.media-preview{position:relative;border:0;padding:0;width:100%;background:#dbe5eb;aspect-ratio:1.33;display:block}.media-preview img{width:100%;height:100%;object-fit:cover;display:block}.media-kind{position:absolute;bottom:8px;left:8px;background:#092040e8;border-radius:4px;color:var(--am);font:800 9px Montserrat,Arial,sans-serif;padding:5px 7px}.media-body{padding:12px;display:flex;flex-direction:column;gap:7px;flex:1}.media-body strong{font:800 11px/1.45 Montserrat,Arial,sans-serif;color:var(--az)}.media-body p{margin:0;font-size:10px;color:#7a8795;line-height:1.55}.media-actions{display:flex;gap:6px;margin-top:auto}.media-actions a,.media-actions button{display:inline-flex;align-items:center;justify-content:center;flex:1;font:700 9px Montserrat,Arial,sans-serif;text-decoration:none;border:1px solid #c6d7e4;background:#fff;color:var(--az);border-radius:5px;padding:8px 4px}.media-actions button{color:#00859d}.page-controls{display:flex;gap:10px;justify-content:center;align-items:center;margin:18px 0}.page-controls button{padding:10px 14px;border:1px solid #cbd9e4;border-radius:7px;background:#fff;color:var(--az);font:700 10px Montserrat,Arial,sans-serif}.page-controls button:disabled{opacity:.4;cursor:default}.active-album{background:#e5f8fa;color:#085268;padding:10px 13px;border:1px solid #b2dbe2;border-radius:7px;display:flex;justify-content:space-between;gap:10px;margin-bottom:14px;font-size:11px}.active-album button{border:0;background:transparent;color:#005f78;font-weight:700;text-decoration:underline}.territory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.territory-card{background:#fff;border:1px solid var(--bd);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:11px}.territory-card h3{font-size:15px;color:var(--az)}.territory-card .num{font:800 30px Montserrat,Arial,sans-serif;color:var(--ci)}.territory-card p{font-size:11px;color:#64788d;margin:0;line-height:1.5}.taglist{display:flex;flex-wrap:wrap;gap:6px}.terr-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto}.alert{background:#fff9e3;border:1px solid #ebd991;border-left:4px solid var(--am);border-radius:9px;padding:13px 16px;color:#795f15;font-size:11px;line-height:1.55;margin:16px 0}.footer{max-width:1225px;margin:12px auto 0;background:var(--az);color:#c7daeb;border-radius:10px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:15px;font-size:10px}.footer strong{color:var(--am)}.footer .foot-pill{background:var(--am);color:var(--az);padding:7px 10px;border-radius:999px;font:800 10px Montserrat,Arial,sans-serif}
+.overlay{position:fixed;inset:0;background:#001830b9;display:flex;justify-content:center;align-items:center;padding:18px;z-index:120;overflow:auto}.detail{width:min(1100px,100%);max-height:min(91vh,1000px);overflow:auto;background:#fff;border-radius:13px;padding:22px 24px;box-shadow:0 24px 80px #00142570}.detail-head{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;border-bottom:1px solid var(--bd);padding-bottom:13px;margin-bottom:14px}.detail-head h3{font:800 19px/1.4 Montserrat,Arial,sans-serif;color:var(--az)}.detail-head small{font:800 10px Montserrat,Arial,sans-serif;color:#008ba6}.close{width:34px;height:34px;border:0;border-radius:8px;background:#e8eef3;color:#092040;font-size:21px;flex-shrink:0}.detail-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:13px}.detail-note{font-size:11px;line-height:1.55;color:#6d7c8c;margin:11px 0}.lightbox{width:min(1020px,100%);max-height:96vh;background:#041b35;border-radius:12px;padding:12px 14px 18px;color:#fff;display:flex;flex-direction:column;gap:12px}.lb-head{display:flex;justify-content:space-between;gap:15px;align-items:center}.lb-head strong{font:800 12px Montserrat,Arial,sans-serif;color:#f1dc57}.lb-display{height:min(73vh,720px);display:flex;align-items:center;justify-content:center;background:#0005;border-radius:9px;overflow:hidden}.lb-display img{width:100%;height:100%;object-fit:contain}.lb-display iframe{width:100%;height:100%;border:0;background:#fff}.lb-foot{display:flex;align-items:center;gap:9px;justify-content:space-between;flex-wrap:wrap}.lb-foot a{background:var(--am);border-radius:6px;color:var(--az);text-decoration:none;padding:10px 13px;font:700 10px Montserrat,Arial,sans-serif}.lb-foot button{background:#fff1;border:1px solid #fff5;color:#fff;border-radius:6px;padding:9px 11px;font:700 10px Montserrat,Arial,sans-serif}.empty{padding:24px;text-align:center;color:#718196;background:white;border:1px dashed #cbdce7;border-radius:9px;grid-column:1/-1}.failpic{background:linear-gradient(115deg,#d6e2ec,#f1f7fa);height:100%;display:flex;align-items:center;justify-content:center;text-align:center;color:#6b7e8e;font:700 10px Montserrat,Arial,sans-serif;padding:14px}
+@media(max-width:1000px){.album-grid,.gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.preview-row{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:800px){.bar-inner{flex-wrap:wrap;gap:8px}.nav{width:100%;justify-content:space-between}.nav button{flex:1;padding:8px 4px;font-size:9px}.actions-grid,.card-grid,.territory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.album-grid,.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.container{padding:14px 11px 25px}.hero{padding:22px 19px}.bar-inner{padding:8px 10px}.brand-name{font-size:11px}.brand .mark{max-width:95px;height:39px}.brand-sub{font-size:8px}.actions-grid,.card-grid,.territory-grid,.album-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.preview-row{grid-template-columns:repeat(2,minmax(0,1fr))}.media-body{padding:8px}.media-body strong{font-size:10px}.media-actions{flex-direction:column}.media-preview{aspect-ratio:1.05}.auth-card{padding:28px 22px!important}.filterbar{gap:8px}.field{min-width:125px}.page-intro h2{font-size:19px}.footer{margin:8px 11px;flex-wrap:wrap}.detail{padding:15px}.detail-head h3{font-size:15px}}
+
+/* Correção da identificação de cursos, mantendo o padrão do Prospera Turismo */
+.course-lesson{color:#07728d;font:700 10px Montserrat,Arial,sans-serif;margin-top:7px;line-height:1.5}
+.course-provisional{padding:8px 10px;background:#fff8de;border-left:3px solid #ecc203;border-radius:5px;color:#62501e;font-size:10px;line-height:1.5;margin-bottom:7px}
+.course-sources{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px;padding:12px;background:#f4f8fb;border-radius:9px}
+.course-sources strong{width:100%;font:700 11px Montserrat,Arial,sans-serif;color:#092040}
+.course-sources a{padding:7px 10px;text-decoration:none;background:#e0f6fa;color:#006f86;border-radius:6px;font:700 10px Montserrat,Arial,sans-serif}
+.course-sources span{display:block;width:100%;font-size:10px;color:#64748b}
+
+/* Álbuns reais: cada foto aparece uma única vez no catálogo; não se repete entre turmas não confirmadas. */
+.collection-card{border:1px solid var(--bd);border-radius:12px;background:#fff;padding:17px;display:flex;flex-direction:column;gap:9px}
+.collection-card h3{font-size:13px;color:var(--az)}
+.collection-card p{font-size:11px;color:#657487;line-height:1.5;margin:0}
+.collection-card .mini-strip{margin:3px 0}
+.collection-tag{font:700 10px Montserrat;color:#08778d}
+.action-card .course-unassigned{background:#f4f8fc;border:1px solid #dbe8ef;border-radius:8px;padding:14px;color:#4e6a7e;font-size:11px;margin:12px 0}
+.course-source-links{display:flex;flex-wrap:wrap;gap:7px;margin:9px 0}
+.course-source-links button{border:1px solid #abc6d9;border-radius:8px;background:#eef9fc;color:#075a70;padding:8px 11px;font:700 10px Montserrat}
+
+.jac-activity{background:#f2f8fc;border:1px solid #d4e4ef;border-radius:9px;padding:11px 13px;margin:10px 0}
+.jac-activity strong{display:block;color:#0c405a;font-size:12px;margin-bottom:5px}
+.jac-activity span{display:block;color:#526981;font-size:11px;line-height:1.55}
+.jac-note{color:#64778b;font:600 10px Montserrat,sans-serif;margin:7px 0}
+.jac-doc-actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.jac-doc-actions a{display:inline-flex;text-decoration:none;border:1px solid #b4c9da;border-radius:8px;background:#fff;color:#092040;padding:9px 13px;font:700 11px Montserrat,sans-serif}
+
+/* Portal documental, preservando o estilo Prospera Turismo */
+.doc-toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 12px}
+.doc-toolbar input,.doc-toolbar select{background:white;border:1px solid var(--bd);border-radius:9px;padding:12px 14px;font:12px 'Open Sans',sans-serif;color:var(--az);min-width:190px}
+.doc-toolbar input{flex:2;min-width:260px}.doc-toolbar select{flex:1}
+.doc-links{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 15px}
+.doc-note{font-size:11px;color:#5e7183;line-height:1.6;margin:12px 0 20px;max-width:920px}
+.doc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.doc-folder{border:1px solid var(--bd);background:#fff;border-radius:12px;padding:18px;box-shadow:0 2px 8px #00152c0b;display:flex;flex-direction:column;gap:9px;min-height:170px}
+.doc-folder .doc-kind{font:700 10px Montserrat,sans-serif;color:#0091aa}
+.doc-folder h3{font:700 13px Montserrat,sans-serif;color:var(--az);line-height:1.5;margin:0}
+.doc-folder p{font:11px 'Open Sans',sans-serif;color:#5e7082;line-height:1.5;margin:0}
+.doc-folder a{align-self:flex-start;margin-top:auto;display:inline-block;padding:9px 13px;background:var(--az);color:#fff;border-radius:8px;text-decoration:none;font:700 11px Montserrat,sans-serif}
+.video-thumb{display:flex;position:relative;align-items:center;justify-content:center;width:100%;height:100%;min-height:110px;background:linear-gradient(120deg,#0b2348,#155b78);overflow:hidden}
+.video-thumb img{position:absolute;width:100%;height:100%;object-fit:cover;inset:0}
+.video-play{position:relative;z-index:1;color:#fff;background:#031b3bce;border:2px solid #fff9;width:48px;height:48px;display:flex;align-items:center;justify-content:center;border-radius:999px;font-size:20px;box-shadow:0 4px 14px #0006}
+@media(max-width:860px){.doc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.doc-grid{grid-template-columns:1fr}.doc-toolbar{flex-direction:column}.doc-toolbar input,.doc-toolbar select{width:100%}}
+
+/* Consulta unificada sem redirecionamento externo */
+.doc-grid .doc-folder{padding:0;overflow:hidden;gap:0}
+.doc-pict{height:145px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px;overflow:hidden;background:linear-gradient(115deg,#e8f1f9,#d9ecf4);border-bottom:1px solid var(--bd)}
+.doc-pict .doc-shot{height:100%;width:100%;border:0;object-fit:cover;min-width:0;background:#e0eaf1;overflow:hidden}
+.doc-pict .doc-nophoto{grid-column:1/-1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:9px;color:#41637a;font:700 12px Montserrat,Arial,sans-serif}
+.doc-pict .doc-nophoto span{font-size:31px}
+.doc-info{padding:16px;display:flex;flex:1;flex-direction:column;gap:9px}
+.doc-info .card-actions{margin-top:auto}
+.doc-folder button{align-self:flex-start;margin-top:auto;border:0;border-radius:8px;background:var(--az);color:var(--am);padding:10px 13px;font:800 10px Montserrat,Arial,sans-serif}
+.doc-info .doc-countline{font-size:10px;color:#658099;font-weight:700}
+.doc-preview-note{font-size:10px;color:#61788b;line-height:1.5}
+.jac-preview-note{color:#63778b;font-size:10px;line-height:1.5;margin:-2px 0 9px}
+.jac-doc-actions button{border:1px solid #b4c9da;border-radius:8px;background:#fff;color:#092040;padding:9px 13px;font:700 11px Montserrat,sans-serif}
+.detail .gallery-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:760px){.detail .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.doc-pict{height:122px}}
+
+
+
+/* =============================================================
+   LRJ 2026 · Premium Responsive Edition (keep legacy data intact)
+   ============================================================= */
+:root{--az:#092040;--ci:#00B7D7;--am:#ECC203;--bd:#dce7ef;--mut:#667c91;--bg:#f5f8fc;--deep:#071e37;
+ --shadow:0 14px 40px rgba(5,32,60,.075);--radius:20px;--ease:cubic-bezier(.22,1,.36,1)}
+html{scroll-padding-top:90px;-webkit-text-size-adjust:100%;overflow-x:clip}
+body{background:linear-gradient(180deg,#f2f6fb 0%,#f7f9fc 35%,#f3f7fa 100%);color:#09243e;font-size:14px;line-height:1.6;overflow-x:hidden;font-family:'Open Sans',system-ui,-apple-system,'Segoe UI',sans-serif}
+#app{min-height:100dvh}
+button,select,input{font-size:14px;touch-action:manipulation}
+button:disabled{opacity:.5;cursor:not-allowed}
+button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #00b7d7;outline-offset:3px}
+.skip-link{position:fixed;top:-100px;left:12px;z-index:5000;background:#fff;color:#092040;padding:12px 20px;border:2px solid #00b7d7;border-radius:12px}
+.skip-link:focus{top:12px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.section-kicker{display:block;color:#0087a4;font:800 11px Montserrat,system-ui,sans-serif;letter-spacing:1.45px;text-transform:uppercase;margin-bottom:8px}
+.topbar{background:rgba(7,30,56,.985);box-shadow:0 8px 25px rgba(3,24,46,.13);border-bottom:1px solid rgba(255,255,255,.10);backdrop-filter:blur(18px)}
+.bar-inner{max-width:1330px;min-height:78px;gap:18px;padding:10px 26px}
+.brand{gap:13px}
+.brand .mark{width:48px;height:48px;max-width:none;object-fit:contain;padding:4px;background:#fff;border-radius:13px;box-shadow:0 3px 8px #0002}
+.brand-rule{height:33px;opacity:.6}
+.brand-name{color:#f7d133;font-size:15px;letter-spacing:.15px}
+.brand-sub{font-size:10px;line-height:1.4;color:#bcd2e4;max-width:330px}
+.header-tools{display:flex;align-items:center;gap:8px;margin-left:auto;flex:none}
+.icon-btn{display:grid;place-items:center;border:1px solid #496179;border-radius:13px;background:#173653;color:#e6f7ff;width:43px;height:43px;transition:background .18s,transform .18s}
+.icon-btn:hover{background:#1e4666;transform:translateY(-1px)}
+.nav{gap:4px;flex-wrap:nowrap}
+.nav button{font-size:11px;border-radius:12px;padding:13px 12px;color:#c7dce9;min-height:44px}
+.nav button.active{background:#ecc203;color:#06213e;box-shadow:0 4px 12px #ecc20335}
+.mobile-tabs{display:none}
+.container{max-width:1280px;padding:28px 26px 58px}
+.section{animation:fade-in .24s var(--ease) both}
+@keyframes fade-in{from{opacity:.5;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.hero{padding:42px 42px 38px;border:1px solid #ffffff14;border-radius:26px;background:radial-gradient(circle at 100% 8%,rgba(0,183,215,.21),transparent 38%),linear-gradient(119deg,#061c38 0%,#0c3158 63%,#0c5c72 100%);box-shadow:0 22px 45px #0920401b;isolation:isolate}
+.hero:after{border:1px solid #ffffff20;right:-110px;top:-175px;width:430px;height:430px;box-shadow:0 0 0 56px #ffffff08,0 0 0 120px #ffffff05;z-index:-1}
+.hero-label{display:flex;align-items:center;gap:8px;border:1px solid #ecc20350;background:#ecc20312;border-radius:999px;padding:8px 12px;width:max-content;max-width:100%;color:#ffe36c;font-size:10px;letter-spacing:1.0px}
+.hero-dot{width:7px;height:7px;background:#0fdfc3;box-shadow:0 0 0 4px #0fdfc322;border-radius:50%}
+.hero h1{font-size:clamp(27px,3.4vw,42px);line-height:1.18;max-width:650px;letter-spacing:-1.2px;margin:22px 0 15px;font-weight:800}
+.hero h1 em{color:#f7cb1b;font-style:normal}
+.hero p{font-size:14px;line-height:1.8;max-width:690px;color:#d9ecf8;margin:0 0 26px}
+.hero-actions{gap:12px}
+.btn{min-height:45px;font-size:12px;border-radius:12px;padding:13px 17px;font-weight:800;white-space:normal;text-align:center}
+.btn:hover,.premium-primary:hover{filter:brightness(.97)}
+.btn-yellow{box-shadow:0 6px 15px #e0bf2530}
+.kpis{gap:14px;margin:18px 0 28px}
+.kpi{border-radius:18px;border-color:#e3ebf2;background:#fff;padding:20px 21px;box-shadow:var(--shadow);min-width:0}
+.kpi b{font-size:clamp(27px,3vw,35px);line-height:1.08;color:#008ca8;letter-spacing:-1.5px}
+.kpi span{font-size:12px;line-height:1.45;margin-top:8px}
+.eyebrow{font-size:13px;margin:30px 0 14px;letter-spacing:-.2px;border-left-width:3px}
+.home-section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin:32px 0 15px}
+.home-section-head h2{color:#092040;font-size:clamp(19px,2vw,25px);letter-spacing:-.5px}
+.small-hint{color:#8295a5;font-size:11px}
+.card-grid{gap:14px}
+.quick-card{border:1px solid #e1eaf1;box-shadow:var(--shadow);border-radius:20px;padding:24px;min-height:196px;transition:transform .18s,box-shadow .18s;background:#fff}
+.quick-card:hover{transform:translateY(-2px);box-shadow:0 20px 32px #09204013}
+.quick-emoji{font-size:28px;margin-bottom:11px}
+.quick-card h3{font-size:15px;line-height:1.45;letter-spacing:-.3px;margin-bottom:8px}
+.quick-card p{font-size:12px;line-height:1.65}
+.text-link{font-size:12px;color:#007c99;min-height:30px;align-items:center}
+.preview-row{gap:12px}
+.preview-item{border-radius:16px;box-shadow:var(--shadow);border-color:#e3eaf0}
+.preview-item img{aspect-ratio:1.28}
+.preview-item .cap{font-size:11px;line-height:1.5;padding:11px}
+.page-intro{border-radius:21px;box-shadow:var(--shadow);padding:27px 31px;border-color:#e1eaf1}
+.page-intro h2{font-size:clamp(23px,2.7vw,32px);line-height:1.25;letter-spacing:-.9px;margin:7px 0}
+.page-intro p{font-size:13px;line-height:1.8;max-width:820px}
+.page-intro .intro-top{font-size:11px;letter-spacing:1px}
+.filterbar,.doc-toolbar{background:#fff;padding:16px;border:1px solid #e0eaf3;border-radius:19px;box-shadow:var(--shadow);gap:12px}
+.field{min-width:0}
+.field label{font-size:11px;letter-spacing:.15px;line-height:1.3;margin-bottom:7px;color:#526e83;font-weight:800}
+.filterbar input,.filterbar select,.doc-toolbar input,.doc-toolbar select{min-width:0;width:100%;height:46px;border-radius:11px;border:1px solid #cbdbe8;background:#f8fafc;padding:9px 12px;font-size:13px;color:#102e47}
+.result-note{color:#57748c;font-size:12px;margin:14px 3px}
+.action-card,.territory-card,.doc-folder,.album-card,.media-card{border-radius:20px;border-color:#dfebf4;box-shadow:var(--shadow);overflow:hidden;background:#fff;transition:box-shadow .18s, transform .18s}
+.action-card:hover,.territory-card:hover,.doc-folder:hover,.album-card:hover{box-shadow:0 19px 34px #002f5118}
+.action-card{padding:21px;display:flex;flex-direction:column;min-width:0}
+.action-card h3{font-size:16px;line-height:1.45;margin:12px 0 10px;letter-spacing:-.25px}
+.card-overline{font-size:12px;letter-spacing:.12px}
+.action-card .sub{font-size:12px;line-height:1.6}
+.action-card .status{font-size:10px;border-radius:999px;padding:6px 9px}
+.mini-strip{border-radius:12px;overflow:hidden;gap:5px;margin:14px 0}
+.mini-strip img{min-height:84px;object-fit:cover}
+.card-actions{gap:9px;margin-top:auto;flex-wrap:wrap}
+.card-actions button{flex:1 1 auto;min-height:44px;line-height:1.35}
+.countline{margin:12px 0;gap:6px}
+.chip{font-size:11px;padding:6px 10px;line-height:1.3;border-radius:999px}
+.jac-activity{background:#f1f7fb;padding:16px;border:1px solid #daebf6;border-radius:14px}
+.jac-activity strong{font-size:13px}
+.jac-activity span{font-size:11px;line-height:1.6}
+.course-provisional{font-size:12px;line-height:1.6;padding:12px}
+.jac-doc-actions button{min-height:44px;font-size:12px}
+.album-grid,.gallery-grid,.actions-grid,.doc-grid{gap:14px}
+.album-card{min-width:0;display:block}
+.album-info{padding:13px}
+.album-info strong{font-size:12px;line-height:1.4}
+.album-info small{font-size:11px}
+.album-pic{border-radius:0;overflow:hidden}
+.album-pic img{width:100%;height:100%;object-fit:cover}
+.media-card .media-preview{display:block;position:relative;aspect-ratio:1.15;overflow:hidden;width:100%}
+.media-card .media-preview img{width:100%;height:100%;object-fit:cover;display:block}
+.media-card .media-body{padding:15px;display:flex;flex-direction:column;min-width:0}
+.media-body strong{font-size:12px;line-height:1.5;overflow-wrap:anywhere}
+.media-body p{font-size:11px;line-height:1.55}
+.media-actions{margin-top:auto}
+.media-actions button{min-height:40px;border-radius:10px;font-size:11px}
+.media-kind{font-size:10px;bottom:10px;left:10px;padding:6px 10px;border-radius:999px}
+.video-play{background:#ecc203;color:#092040;border:3px solid #ffffffaa;box-shadow:0 4px 15px #001b3299}
+.doc-pict{height:175px}
+.doc-info{padding:20px;gap:10px}
+.doc-info h3{font-size:15px;line-height:1.35}
+.doc-info p,.doc-countline{font-size:12px}
+.doc-folder button{min-height:44px;font-size:12px;border-radius:12px;padding:12px 16px}
+.doc-note{background:#f2f7fb;color:#587087;font-size:11px;border-radius:10px;padding:14px}
+.territory-card{padding:24px}
+.territory-card h3{font-size:18px}
+.territory-card .num{font-size:36px}
+.terr-actions{gap:10px}
+.terr-actions .btn{flex:1}
+.footer{max-width:1280px;margin:10px auto 32px;border-radius:18px;padding:22px;line-height:1.8;font-size:11px}
+.load-more{display:flex;justify-content:center;margin:18px auto 20px;min-width:200px;border:1px solid #b9d1e1}
+.overlay{background:rgba(4,23,43,.76);backdrop-filter:blur(10px);padding:20px}
+.detail,.lightbox{box-shadow:0 26px 70px #0005;border:1px solid #e6eef7;border-radius:22px}
+.detail-head{gap:10px;position:sticky;top:-1px;z-index:3;background:#fff;padding:5px 0 15px}
+.detail-head h3{font-size:20px;line-height:1.3}
+.detail-head small{font-size:11px}
+.detail-note{font-size:13px;line-height:1.7}
+.detail-meta{margin:12px 0}
+.close,.round-close{font-size:24px;min-width:44px;min-height:44px;display:grid;place-items:center;border:1px solid #dee8f1;border-radius:13px;background:#f3f7fa;color:#193650}
+.lb-head{padding:12px 16px;gap:10px}
+.lb-head strong{font-size:13px;line-height:1.4}
+.lb-foot{padding:13px;gap:10px}
+.lb-foot button{min-height:46px;border-radius:12px}
+#lb-display iframe,#lb-display img{max-height:calc(100dvh - 186px)}
+/* Login: large tap targets and polished entrance */
+#access{padding:20px;min-height:100dvh;background:radial-gradient(circle at 80% 0%,#15536d 0%,transparent 39%),radial-gradient(circle at -10% 90%,#143d61 0%,transparent 42%),#061d39;overflow:auto}
+#access:before{content:"";position:absolute;width:420px;height:420px;border:1px solid #ffffff12;border-radius:50%;right:-190px;top:-170px;box-shadow:0 0 0 70px #ffffff05,0 0 0 140px #ffffff04;pointer-events:none}
+#access .auth-card{max-width:440px;width:100%;padding:42px 37px;border-radius:28px;box-shadow:0 34px 70px #00162666;text-align:left;position:relative;z-index:1}
+.auth-logo{display:block;max-width:130px;height:68px;object-fit:contain;margin:0 auto 24px}
+.auth-title{font-size:15px;line-height:1.5;letter-spacing:.1px;color:#092040;text-transform:none}
+.auth-sub{font-size:13px;line-height:1.65;color:#5f748a;margin:8px 0 24px}
+.auth-input{width:100%;height:54px;border-color:#c3dbe8;border-radius:14px;font-size:16px;letter-spacing:.4px;padding:12px 16px;margin-bottom:12px;background:#f6f9fd}
+.auth-input:focus{border-color:#00b7d7}
+.auth-button{height:53px;border-radius:14px;font-size:13px;letter-spacing:.2px;background:#092040;color:#ecc203;transition:transform .15s}
+.auth-button:active{transform:scale(.99)}
+.auth-msg{font-size:12px;margin-top:12px}
+.auth-note{font-size:11px;line-height:1.6;color:#778a9b;margin:6px 0 0}
+.auth-logos{position:static;color:#a5c3d6;margin:0;display:none}
+/* premium onboarding + search overlays */
+.premium-overlay{position:fixed;inset:0;z-index:1800;background:#021a31c9;backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;padding:18px}
+.premium-dialog{width:min(100%,500px);max-height:94dvh;overflow:auto;background:#fff;border-radius:26px;box-shadow:0 30px 90px #0005;outline:0}
+.onboard-art{position:relative;height:205px;overflow:hidden;background:radial-gradient(circle at 80% 80%,#156982 0%,transparent 40%),linear-gradient(135deg,#071e3b,#0c4165);color:#fff}
+.onboard-art:before{content:"";position:absolute;left:50%;top:40%;transform:translate(-50%,-40%);width:145px;height:145px;border:1px solid #fff4;border-radius:50%;box-shadow:0 0 0 45px #ffffff09,0 0 0 86px #ffffff06}
+.onboard-orbit{font-size:70px;position:absolute;left:50%;top:30%;transform:translateX(-50%);color:#f5ce25;text-shadow:0 0 38px #ecc20388;line-height:1}
+.onboard-chip{position:absolute;background:#fff;color:#0d3354;padding:8px 12px;box-shadow:0 10px 25px #00162655;border-radius:999px;font-weight:800;font-size:11px}
+.onboard-chip.one{left:10%;top:19%}.onboard-chip.two{right:10%;top:48%}.onboard-chip.three{left:16%;bottom:14%}
+.onboard-content{padding:28px 30px 30px}
+.onboard-content h2,.search-dialog-head h2{font:800 25px/1.24 Montserrat,system-ui,sans-serif;color:#08213b;letter-spacing:-.7px;margin:0 0 10px}
+.onboard-content p{font-size:13px;line-height:1.7;color:#536e86;margin:0 0 20px}
+.premium-field-label{display:block;color:#48647e;font-weight:800;font-size:12px;margin:0 0 7px}
+#onboarding-territory{display:block;width:100%;height:51px;background:#f6f9fc;color:#092840;border:1px solid #c9dae9;border-radius:12px;padding:10px 14px;font-size:15px;margin-bottom:13px}
+.premium-primary{width:100%;height:54px;border:0;border-radius:13px;color:#082341;background:#ecc203;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;gap:12px}
+.premium-subtle{display:block;border:0;background:transparent;color:#667f94;font-weight:800;font-size:12px;text-align:center;padding:14px;margin:0 auto;min-height:44px}
+.search-dialog{padding:24px;max-width:640px}
+.search-dialog-head{display:flex;align-items:flex-start;gap:14px;justify-content:space-between}
+.search-dialog-head h2{font-size:21px}
+.premium-search-input{display:flex;align-items:center;gap:9px;background:#f3f7fa;padding:4px 15px;border-radius:15px;border:1px solid #bed4e4;margin:18px 0}
+.premium-search-input svg{color:#6e889a;flex:none}
+.premium-search-input input{border:0;outline:none;background:transparent;width:100%;height:48px;min-width:0;font-size:15px;color:#092840}
+.premium-search-results{max-height:50dvh;overflow-y:auto;display:flex;flex-direction:column;gap:7px}
+.premium-search-result{display:flex;gap:12px;align-items:center;width:100%;padding:13px;border-radius:13px;background:#fff;border:1px solid #e0e9f0;text-align:left;color:#173954;min-height:57px}
+.premium-search-result:hover{background:#eef8fb;border-color:#8cd7e4}
+.premium-search-result .result-icon{display:grid;place-items:center;width:37px;height:37px;background:#e9f7fb;border-radius:11px;flex:none;font-size:18px}
+.premium-search-result strong{display:block;font:800 12px Montserrat,system-ui,sans-serif;line-height:1.5}
+.premium-search-result small{display:block;font-size:11px;color:#708499;margin-top:2px}
+.search-hint{font-size:11px;color:#73869b;margin:13px 2px 0}
+.sheet-grip{display:none}
+@media(min-width:1025px){.nav{margin-left:0}.bar-inner{gap:24px}}
+@media(min-width:769px) and (max-width:1200px){.brand-sub{display:none}.brand-rule{display:none}.nav button{font-size:10px;padding:12px 9px}.bar-inner{gap:13px}}
+@media(max-width:768px){
+  html{scroll-padding-top:74px}
+  body{font-size:14px}
+  .topbar{position:sticky;top:0;z-index:90}
+  .bar-inner{min-height:65px;display:flex;flex-wrap:nowrap;gap:12px;padding:9px 16px}
+  .brand{gap:10px;overflow:hidden;flex:1}
+  .brand .mark{width:41px;height:41px;max-width:none;flex:none;border-radius:11px}
+  .brand-rule{display:none}
+  .brand-name{font-size:13px;line-height:1.35;letter-spacing:.25px}
+  .brand-sub{font-size:9px;max-width:160px;white-space:normal;line-height:1.35}
+  .header-tools{gap:6px;flex:none}
+  .icon-btn{width:40px;height:40px;border-radius:12px}
+  .nav{display:none!important}
+  .mobile-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:fixed;bottom:0;left:0;right:0;z-index:150;background:#ffffffee;backdrop-filter:blur(20px);border-top:1px solid #dce6ed;box-shadow:0 -7px 20px #0b355114;padding:7px max(7px,env(safe-area-inset-right)) calc(6px + env(safe-area-inset-bottom)) max(7px,env(safe-area-inset-left));gap:1px}
+  .mobile-tab{min-width:0;min-height:53px;border:none;background:transparent;color:#61798f;display:flex;flex-direction:column;gap:3px;align-items:center;justify-content:center;border-radius:12px;padding:6px 0;position:relative;transition:background .18s,color .18s}
+  .mobile-tab span{font-size:10px;line-height:1.25;font-weight:800;letter-spacing:-.1px;white-space:nowrap}
+  .mobile-tab svg{width:21px;height:21px}
+  .mobile-tab.active{color:#0b4266;background:#e4f5f9}
+  .mobile-tab.active:before{content:"";position:absolute;top:0;left:28%;right:28%;height:3px;border-radius:0 0 4px 4px;background:#00acc7}
+  .container{padding:18px 14px calc(115px + env(safe-area-inset-bottom));max-width:100%;width:100%}
+  .hero{padding:26px 22px 27px;border-radius:22px;box-shadow:0 16px 27px #0b2e5019}
+  .hero:after{width:270px;height:270px;right:-135px;top:-130px;box-shadow:0 0 0 38px #ffffff08,0 0 0 85px #ffffff05}
+  .hero-label{font-size:9px;padding:7px 10px;letter-spacing:.5px}
+  .hero h1{font-size:clamp(26px,6.5vw,35px);line-height:1.18;margin:20px 0 13px;letter-spacing:-.8px}
+  .hero p{font-size:12px;line-height:1.78;margin:0 0 21px}
+  .hero-actions{display:grid;grid-template-columns:1fr;gap:9px}
+  .hero-actions .btn{width:100%;font-size:12px}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:13px 0 24px}
+  .kpi{padding:16px 14px;border-radius:16px;min-height:106px}
+  .kpi b{font-size:29px}
+  .kpi span{font-size:11px;line-height:1.4}
+  .home-section-head{margin:26px 0 13px;align-items:end}
+  .home-section-head h2{font-size:19px}
+  .home-section-head .small-hint{display:none}
+  .card-grid{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(240px,78vw);grid-template-columns:none;gap:12px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;padding:3px 1px 14px;margin-right:-14px;padding-right:14px}
+  .quick-card{min-height:190px;padding:22px;scroll-snap-align:start}
+  .quick-emoji{font-size:27px}
+  .quick-card h3{font-size:15px}
+  .quick-card p{font-size:12px}
+  .preview-row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(185px,52vw);grid-template-columns:none;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin-right:-14px;padding:3px 14px 12px 0}
+  .preview-item{scroll-snap-align:start;min-width:0}
+  .preview-item img{aspect-ratio:1.35}
+  .page-intro{padding:22px 19px;border-radius:19px;margin-bottom:12px}
+  .page-intro h2{font-size:23px;letter-spacing:-.65px}
+  .page-intro p{font-size:12px;line-height:1.75}
+  .page-intro .intro-top{font-size:10px}
+  .filterbar,.doc-toolbar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;padding:12px;border-radius:16px;box-shadow:0 5px 13px #05293e08}
+  .field.search{grid-column:1/-1}
+  .field{width:auto;flex:auto;min-width:0}
+  .field label{font-size:11px}
+  .filterbar input,.filterbar select,.doc-toolbar input,.doc-toolbar select{height:47px;font-size:13px;max-width:100%}
+  .doc-toolbar input{grid-column:1/-1}
+  .actions-grid,.territory-grid,.doc-grid{display:grid;grid-template-columns:1fr;gap:12px}
+  .action-card{padding:17px 17px 19px;border-radius:18px}
+  .action-card h3{font-size:16px;margin:11px 0 7px}
+  .action-card .sub,.card-overline{font-size:11px}
+  .action-card .status{font-size:10px}
+  .card-actions{display:grid;grid-template-columns:1fr;gap:8px;width:100%;margin-top:13px}
+  .card-actions .btn{min-height:46px;width:100%}
+  .countline{gap:5px;flex-wrap:wrap}
+  .chip{font-size:10px;padding:6px 9px}
+  .jac-activity{padding:15px;border-radius:13px}
+  .jac-activity strong{font-size:13px}
+  .jac-activity span{font-size:11px}
+  .course-sources{padding:12px}
+  .album-grid,.gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .album-card{border-radius:16px}
+  .album-info{padding:11px}
+  .album-info strong{font-size:11px;line-height:1.5}
+  .album-info small{font-size:10px}
+  .album-count{font-size:10px}
+  .media-card{border-radius:16px}
+  .media-card .media-preview{aspect-ratio:1/1.05}
+  .media-body{padding:10px 9px;min-width:0}
+  .media-body strong{font-size:11px;line-height:1.4}
+  .media-body p{font-size:10px;line-height:1.5;margin:5px 0 0}
+  .media-actions{margin-top:6px}
+  .media-actions button{width:100%;min-height:40px;font-size:10px;border-radius:10px}
+  .media-kind{font-size:9px;padding:6px 8px}
+  .video-play{font-size:17px}
+  .page-controls{gap:10px;align-items:center;justify-content:center;margin:19px auto}
+  .page-controls button{min-height:47px;min-width:108px;border-radius:12px}
+  #page-number{font-size:11px}
+  .doc-grid{gap:12px}
+  .doc-pict{height:158px}
+  .doc-info{padding:17px}
+  .doc-info h3{font-size:15px}
+  .doc-folder button{width:100%}
+  .territory-card{padding:20px}
+  .territory-card h3{font-size:18px}
+  .territory-card .num{font-size:34px}
+  .footer{margin:0 14px calc(116px + env(safe-area-inset-bottom));padding:15px 18px;font-size:10px;line-height:1.7;flex-direction:column;align-items:flex-start;gap:8px}
+  .foot-pill{font-size:10px}
+  .overlay{padding:0;align-items:flex-end;justify-content:center;z-index:180}
+  .detail,.lightbox{width:100vw!important;max-width:100vw!important;height:min(94dvh,1000px)!important;max-height:94dvh!important;overflow:auto;border-radius:23px 23px 0 0!important;border:0;padding:17px 15px calc(20px + env(safe-area-inset-bottom));margin:0;box-shadow:0 -18px 50px #001c3466;overscroll-behavior:contain}
+  .detail:before,.lightbox:before{content:"";display:block;width:42px;height:5px;background:#c9d9e5;border-radius:999px;margin:-4px auto 12px}
+  .detail-head{padding:0 0 14px;align-items:center;top:0}
+  .detail-head h3{font-size:18px;line-height:1.32}
+  .detail-head small{font-size:10px}
+  .detail-meta{flex-wrap:wrap}
+  .detail-note{padding:13px;font-size:12px;line-height:1.75}
+  .detail .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  #detail-more{width:100%;min-height:48px}
+  .lightbox{display:flex;flex-direction:column}
+  .lb-head{padding:0 0 12px;flex:none}
+  .lb-head strong{font-size:12px}
+  .lb-display{min-height:0;flex:1;display:grid;place-items:center}
+  #lb-display img{width:100%;max-width:100%;max-height:calc(90dvh - 180px);object-fit:contain}
+  #lb-display iframe{width:100%;height:min(64dvh,600px);border:0}
+  .lb-foot{margin-top:auto;gap:8px;padding:12px 0 4px;display:flex;align-items:center;justify-content:space-between}
+  .lb-foot button{min-height:46px;font-size:12px}
+  .premium-overlay{align-items:flex-end;justify-content:center;padding:0}
+  .premium-dialog{width:100%;max-width:100%;max-height:94dvh;border-radius:25px 25px 0 0;padding-bottom:env(safe-area-inset-bottom)}
+  .onboard-art{height:180px}
+  .onboard-content{padding:22px 22px 18px}
+  .onboard-content h2{font-size:23px}
+  .onboard-content p{font-size:12px}
+  .search-dialog{padding:12px 18px calc(15px + env(safe-area-inset-bottom))}
+  .sheet-grip{display:block;width:43px;height:5px;border-radius:99px;background:#cfdeea;margin:1px auto 20px}
+  .search-dialog-head h2{font-size:20px}
+  .premium-search-results{max-height:52dvh}
+  #access{align-items:center;padding:20px 14px 20px}
+  #access .auth-card{padding:32px 24px;border-radius:24px}
+  .auth-logo{height:64px}
+  .auth-title{font-size:15px}
+  .auth-sub{font-size:12px}
+  .auth-input{height:52px}
+}
+@media(max-width:360px){.bar-inner{padding:9px 10px}.brand-sub{display:none}.brand-name{font-size:12px}.icon-btn{width:37px;height:39px}.mobile-tab span{font-size:9px}.mobile-tab svg{height:19px;width:19px}.kpi b{font-size:25px}.hero h1{font-size:25px}.container{padding-inline:10px}.album-grid,.gallery-grid{gap:7px}.media-card .media-body{padding:9px 7px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+
+/* Leitor de relatórios: somente referências a arquivos já compartilhados para leitura no Drive */
+.report-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px;margin:10px 0 18px}
+.report-gallery:empty{display:none}
+.report-tile{border:1px solid var(--bd,#d7e1eb);border-radius:14px;padding:12px;display:flex;gap:12px;align-items:center;background:#fff;min-width:0}
+.report-file-icon{width:54px;height:70px;flex:0 0 54px;position:relative;border-radius:9px;background:#f1f5fb;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:900;color:#10345c;border:1px solid #e2e9f1;overflow:hidden}
+.report-file-icon img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#fff}
+.report-file-icon span{position:relative;z-index:1;background:#092040;color:#fff;padding:2px 4px;border-radius:4px;margin-top:44px}
+.report-tile-main{flex:1;min-width:0}
+.report-tile-title{display:block;overflow-wrap:anywhere;line-height:1.35;font-size:.85rem;margin-bottom:9px;color:#092040}
+.report-open{min-height:40px;border:0;background:#092040;color:#fff;font:700 .8rem Montserrat,Arial,sans-serif;padding:9px 12px;border-radius:9px;cursor:pointer}
+.report-open:focus-visible{outline:3px solid #00B7D7;outline-offset:2px}
+.doc-available{color:#0b777c;font-weight:700}
+@media(max-width:540px){.report-gallery{grid-template-columns:1fr}.report-tile{padding:11px}}
+
+
+/* Complementos de conformidade LABRS, sem alterar a identidade visual LRJ. */
+.action-card .status{max-width:185px;white-space:normal;text-align:center;font-size:9px}
+.action-card .mini-strip img{height:66px}
+#detail-text li{margin:5px 0 6px 15px;line-height:1.6}
+#detail-text ul{margin:9px 0 14px 0;padding-left:12px}
+.doc-pict .image-unavailable{background:#e6edf3}
+.lb-drive-link{border-radius:8px;background:#ecc203;padding:8px 12px;color:#092040;font-weight:800;font-size:10px;text-decoration:none}
+.premium-search-result{display:block;width:100%;text-align:left;padding:12px 15px;border:1px solid #d2e2ed;background:#fff;border-radius:10px;margin:7px 0;color:#092040}
+.premium-search-result strong{display:block;font:700 12px Montserrat,Arial,sans-serif}
+.premium-search-result small{display:block;color:#668098;font-size:10px;padding-top:5px}
+.course-provisional{border-left:3px solid #ecc203;background:#fffae8;color:#60511f;padding:8px 11px;border-radius:6px;line-height:1.5;font-size:10px}
+.collection-card .btn{align-self:flex-start;margin-top:8px}
+.doc-folder .doc-info .card-actions a{padding:9px 12px;align-self:auto;margin-top:0;display:inline-flex;background:#fff;color:#092040}
+.doc-folder .doc-info .card-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto}
+.doc-folder .doc-info .card-actions button{background:#092040;color:#ecc203}
+.doc-folder .doc-countline{font-weight:700;color:#59768f}
+@media(max-width:520px){.action-card .card-actions{display:grid;grid-template-columns:1fr}.lb-foot{gap:6px}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#inicio">Pular para conteúdo principal</a>
+<div id="access">
+  <form class="auth-card" id="login-form" autocomplete="off"><img class="auth-logo" src="assets/logo-instituto-br-arte.png" alt="Instituto BR Arte">
+    <div class="auth-title">Sistema de Monitoramento de Prestação de Contas — SMPC</div>
+    <div class="auth-sub">Acompanhe ações, territórios e evidências pelo celular</div>
+    <input class="auth-input" id="password" name="access" type="password" autocomplete="off" placeholder="Senha de acesso" aria-label="Senha de acesso" required>
+    <button class="auth-button" type="submit">Entrar no portal <span aria-hidden="true">→</span></button><p class="auth-note">O login organiza a navegação. Conteúdos publicados no GitHub são públicos; documentos restritos permanecem apenas no Drive protegido.</p><div class="auth-msg" id="auth-msg" role="status"></div>
+  </form><div class="auth-logos"><img src="assets/logo-cabecalho.png" alt="Logomarca Instituto BR Arte"><span>LABORATÓRIO RS</span></div>
+</div>
+<div id="app" hidden>
+<header class="topbar"><div class="bar-inner"><div class="brand"><img src="assets/logo-cabecalho.png" class="mark" alt="Instituto BR Arte"><span class="brand-rule"></span><div><div class="brand-name">LABORATÓRIO RS</div><div class="brand-sub">Sistema de Monitoramento de Prestação de Contas — SMPC</div></div></div>
+<div class="header-tools">
+  <button type="button" id="btn-global-search" class="icon-btn" aria-label="Buscar ações e evidências" title="Buscar" aria-haspopup="dialog">
+    <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+  </button>
+  <button type="button" id="btn-help" class="icon-btn" aria-label="Como usar o aplicativo" title="Como usar">
+    <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.6 9a2.5 2.5 0 0 1 4.8.9c0 1.8-2.4 2.1-2.4 3.7"/><path d="M12 17.5v.3"/></svg>
+  </button>
+</div>
+<nav class="nav" aria-label="Navegação"><button type="button" data-nav="inicio" class="active">Início</button><button data-nav="acoes">Ações e comprovações</button><button data-nav="galeria">Galeria de fotos</button><button data-nav="territorios">Territórios</button><button data-nav="documentos">Documentos e relatórios</button></nav></div></header><nav class="mobile-tabs" id="mobile-tabs" aria-label="Navegação principal no celular"><button type="button" data-nav="inicio" class="mobile-tab active" aria-label="Início" title="Início"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg><span>Início</span></button><button type="button" data-nav="acoes" class="mobile-tab" aria-label="Ações" title="Ações"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3 6 1 1 2-2M3 12l1 1 2-2M3 18l1 1 2-2"/></svg><span>Ações</span></button><button type="button" data-nav="galeria" class="mobile-tab" aria-label="Galeria" title="Galeria"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Galeria</span></button><button type="button" data-nav="territorios" class="mobile-tab" aria-label="Territórios" title="Territórios"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Territórios</span></button><button type="button" data-nav="documentos" class="mobile-tab" aria-label="Arquivos" title="Arquivos"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 2h7l5 5v14a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z"/><path d="M14 2v6h6M9 13h7M9 17h7"/></svg><span>Arquivos</span></button></nav>
+<main id="conteudo" class="container" tabindex="-1">
+<section id="inicio" class="section active">
+  <div class="hero"><div class="hero-label"><span class="hero-dot" aria-hidden="true"></span> Monitoramento de evidências · 4 territórios</div><h1>Todos os registros.<br><em>Uma experiência simples.</em></h1><p>Acompanhe ações, oficinas, intervenções e relatórios. Veja fotos e vídeos diretamente no aplicativo, organizados por território e entrega.</p><div class="hero-actions"><button class="btn btn-yellow" data-nav="acoes">Consultar ações e evidências</button><button class="btn btn-ghost" data-nav="galeria">Abrir galeria de fotos</button></div></div>
+  <div class="kpis"><div class="kpi"><b id="k-actions">34</b><span>Itens de acompanhamento</span></div><div class="kpi"><b id="k-photos">—</b><span>Fotografias no acervo consultável</span></div><div class="kpi"><b id="k-videos">—</b><span>Vídeos com link à origem</span></div><div class="kpi"><b id="k-docs">—</b><span>Documentos no inventário da conformidade</span></div></div>
+  <div class="home-section-head"><div><span class="section-kicker">Acesso rápido</span><h2>Por onde deseja começar?</h2></div><span class="small-hint">Deslize para explorar</span></div><div class="card-grid" id="quick-grid"></div>
+  <div class="home-section-head"><div><span class="section-kicker">Acervo visual</span><h2>Registros em destaque</h2></div><button class="text-link" type="button" data-nav="galeria">Ver todas →</button></div><div class="preview-row" id="preview-row"></div>
+</section>
+<section id="acoes" class="section">
+  <div class="page-intro"><div class="intro-top">Plano de Trabalho · 34 itens monitorados</div><h2>Cada ação com suas evidências</h2><p>Pesquise pelo número, nome, meta, território ou atividade. Abra a ficha da ação para ver miniaturas, vídeos e os arquivos encontrados. Quando não for possível individualizar uma turma, mostramos o acervo territorial separado.</p></div>
+  <div class="filterbar"><div class="field search"><label for="a-search">Buscar item</label><input id="a-search" placeholder="Ex.: curso, seminário, diagnóstico, intervenção..."></div><div class="field"><label for="a-meta">Meta</label><select id="a-meta"><option value="">Todas as metas</option></select></div><div class="field"><label for="a-territory">Território</label><select id="a-territory"><option value="">Todos os territórios</option></select></div></div>
+  <div id="actions-count" aria-live="polite" class="result-note"></div><div id="actions-grid" class="actions-grid"></div><div class="eyebrow" id="course-collections-title">Álbuns reais de capacitação — por data e território</div><div id="course-collections" class="actions-grid"></div>
+</section>
+<section id="galeria" class="section">
+  <div class="page-intro"><div class="intro-top">Acervo fotográfico</div><h2>Galeria de fotos, vídeos e documentos</h2><p>Localize a evidência pelo nome do território, meta, período ou tipo de ação. Amplie as fotografias e assista aos vídeos sem sair do sistema.</p></div>
+  <div class="kpis"><div class="kpi"><b id="g-actions">34</b><span>Itens de acompanhamento</span></div><div class="kpi"><b id="g-photos">—</b><span>Registros fotográficos</span></div><div class="kpi"><b id="g-videos">—</b><span>Vídeos indexados</span></div><div class="kpi"><b id="g-terrs">04</b><span>Territórios</span></div></div>
+  <div class="eyebrow">Álbuns por atividade e território</div><div id="album-grid" class="album-grid"></div><button type="button" class="btn btn-outline load-more" id="albums-more" hidden>Ver mais álbuns</button>
+  <div id="album-selected" class="active-album" hidden><span id="album-selected-title"></span><button id="clear-album">Limpar filtro</button></div>
+  <div class="filterbar"><div class="field search"><label for="g-search">Pesquisar arquivo ou atividade</label><input id="g-search" placeholder="Ex.: oficina, seminário, setembro..."></div><div class="field"><label for="g-type">Tipo de arquivo</label><select id="g-type"><option value="">Fotos e vídeos</option><option value="FOTO">Fotografias</option><option value="VIDEO">Vídeos</option></select></div><div class="field"><label for="g-territory">Território</label><select id="g-territory"><option value="">Todos os territórios</option></select></div><div class="field"><label for="g-meta">Meta</label><select id="g-meta"><option value="">Todas as metas</option></select></div><div class="field"><label for="g-category">Categoria</label><select id="g-category"><option value="">Todas as categorias</option></select></div><div class="field"><label for="g-month">Competência</label><select id="g-month"><option value="">Todas as competências</option></select></div></div>
+  <div id="gallery-count" aria-live="polite" class="result-note"></div><div id="gallery-grid" class="gallery-grid"></div><div class="page-controls"><button id="page-prev">← Anterior</button><span id="page-number">1 / 1</span><button id="page-next">Próxima →</button></div>
+</section>
+<section id="documentos" class="section">
+<div class="page-intro"><div class="intro-top">Acervo documental · Conformidade</div><h2>Relatórios, diagnósticos e documentos</h2><p>Escolha um acervo e abra a galeria do próprio sistema: fotografias, vídeos e informações documentais organizados por ação, mês e território.</p></div>
+<div class="kpis"><div class="kpi"><b id="doc-registros">—</b><span>Registros no controle de migração</span></div><div class="kpi"><b id="doc-documentos">—</b><span>Documentos consultáveis selecionados</span></div><div class="kpi"><b id="doc-pastas">—</b><span>Pastas temáticas disponíveis</span></div><div class="kpi"><b>04</b><span>Territórios monitorados</span></div></div>
+<div class="doc-toolbar"><input id="doc-search" placeholder="Pesquisar por relatório, diagnóstico, oficina, mês..." aria-label="Pesquisar no acervo documental"><select id="doc-territorio" aria-label="Filtrar território"><option value="">Todos os territórios</option><option>São José</option><option>Santa Fé</option><option>Reolon</option><option>Jardim Esmeralda</option><option>Geral</option></select><select id="doc-categoria" aria-label="Filtrar tipo"><option value="">Todos os tipos</option></select></div>
+
+<div class="doc-note">Abra um cartão para consultar fotografias e vídeos aqui no sistema. Registros documentais com dados pessoais e financeiros ficam fora desta publicação. Consulte a planilha privada institucional para conferência integral.</div>
+<div id="doc-count" aria-live="polite" class="result-note"></div><div id="doc-grid" class="doc-grid"></div><button type="button" class="btn btn-outline load-more" id="docs-more" hidden>Ver mais documentos</button>
+</section>
+<section id="territorios" class="section"><div class="page-intro"><div class="intro-top">Navegação por território</div><h2>Quatro territórios. Evidências organizadas.</h2><p>O Laboratório RS acompanha São José, Santa Fé, Reolon e Jardim Esmeralda. Selecione o território para abrir o conjunto correto de mídias e ações.</p></div><div id="territory-grid" class="territory-grid"></div></section>
+</main><footer class="footer"><div><strong>Instituto BR Arte</strong> · Laboratório de Transformação Social e Urbana · Rio Grande do Sul<br><span id="update-info">Atualização do acervo: 07/11/2026 — vínculos em conferência</span></div><span class="foot-pill">Sistema de Monitoramento — SMPC</span></footer>
+</div>
+
+<div id="premium-onboarding" class="premium-overlay" hidden>
+  <section class="premium-dialog onboarding-card" role="dialog" aria-modal="true" aria-labelledby="onboarding-title" tabindex="-1">
+    <div class="onboard-art" aria-hidden="true"><div class="onboard-orbit">◉</div><div class="onboard-chip one">34 itens</div><div class="onboard-chip two">Fotos e vídeos</div><div class="onboard-chip three">4 territórios</div></div>
+    <div class="onboard-content">
+      <span class="section-kicker">Bem-vindo ao Laboratório RS</span>
+      <h2 id="onboarding-title">Seu monitoramento na palma da mão.</h2>
+      <p>Encontre evidências sem sair do sistema. Escolha um território e abra a primeira galeria em um toque.</p>
+      <label for="onboarding-territory" class="premium-field-label">Começar pelo território</label>
+      <select id="onboarding-territory"><option value="">Todos os territórios</option><option>São José</option><option>Santa Fé</option><option>Reolon</option><option>Jardim Esmeralda</option></select>
+      <button type="button" id="onboarding-start" class="premium-primary">Explorar fotografias <span aria-hidden="true">→</span></button>
+      <button type="button" id="onboarding-skip" class="premium-subtle">Ir para o início</button>
+    </div>
+  </section>
+</div>
+<div id="premium-search-overlay" class="premium-overlay" hidden>
+  <section class="premium-dialog search-dialog" role="dialog" aria-modal="true" aria-labelledby="search-dialog-title" tabindex="-1">
+    <div class="sheet-grip" aria-hidden="true"></div>
+    <div class="search-dialog-head"><div><span class="section-kicker">Pesquisa rápida</span><h2 id="search-dialog-title">O que deseja encontrar?</h2></div><button type="button" class="round-close" id="global-search-close" aria-label="Fechar pesquisa">×</button></div>
+    <label for="global-search-input" class="sr-only">Busque por ação, território ou tipo de evidência</label>
+    <div class="premium-search-input"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input type="search" id="global-search-input" placeholder="Ex.: Oficina, Santa Fé, Meta 3…" autocomplete="off"></div>
+    <div id="premium-search-results" class="premium-search-results" aria-live="polite"></div>
+    <p class="search-hint">Pesquise entregas, territórios ou abra a galeria completa.</p>
+  </section>
+</div>
+<div id="detail-overlay" class="overlay" hidden><div class="detail" role="dialog" aria-modal="true" aria-labelledby="detail-title"><div class="detail-head"><div><small id="detail-overline">Ação e comprovação</small><h3 id="detail-title"></h3></div><button type="button" class="close" id="detail-close" title="Fechar" aria-label="Fechar ficha">×</button></div><div id="detail-meta" class="detail-meta"></div><div id="detail-text" class="detail-note"></div><div id="detail-documents" class="report-gallery" aria-live="polite"></div><div id="detail-gallery" class="gallery-grid"></div><button type="button" id="detail-more" class="btn btn-outline load-more" hidden>Mostrar mais fotos</button><div class="card-actions" style="margin-top:18px"><button class="btn btn-dark" id="detail-see-all">Abrir na galeria completa</button><button class="btn btn-outline" id="detail-close-bottom">Fechar ficha</button></div></div></div>
+<div id="lightbox-overlay" class="overlay" hidden><div class="lightbox" role="dialog" aria-modal="true" aria-label="Ampliar foto ou vídeo"><div class="lb-head"><strong id="lb-title">Registro fotográfico</strong><button type="button" class="close" id="lb-close" title="Fechar" aria-label="Fechar foto ou vídeo">×</button></div><div id="lb-display" class="lb-display"></div><div class="lb-foot"><button id="lb-prev">← Anterior</button><span id="lb-indicator">1 de 1</span><button id="lb-next">Próxima →</button></div></div></div>
+<div id="pdf-overlay" class="overlay" hidden><div class="detail" role="dialog" aria-modal="true" aria-label="Visualizar documento" style="width:min(1000px,100%);height:min(92vh,920px);display:flex;flex-direction:column"><div class="detail-head"><div><small>Documento do projeto</small><h3 id="pdf-title">Plano de aula</h3></div><button type="button" class="close" id="pdf-close" title="Fechar" aria-label="Fechar documento">×</button></div><iframe id="pdf-frame" title="Prévia do documento" style="border:0;width:100%;flex:1;background:#fff;border-radius:8px" referrerpolicy="no-referrer"></iframe><p class="doc-note">A prévia é exibida dentro do portal e depende da permissão do arquivo original.</p></div></div>
+<script src="./config.js"></script>
+<script src="./plano.js"></script>
+<script src="./app.js" defer></script>
 </body></html>
